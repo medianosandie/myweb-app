@@ -1,0 +1,25 @@
+.row-title {
+    min-height: 650px;
+
+    .my-photo {
+        border-radius: 40%;
+        overflow: hidden;
+    }
+
+    .my-name {
+        font-family: $font-family-montserrat;
+        font-size: 60px;
+        line-height: 95px;
+        color: $black-primary;
+
+        strong {
+            border-bottom: 3px solid #e41749;
+        }
+    }
+
+    .caption {
+        font-family: $font-family-montserrat;
+        margin-top: 40px;
+        letter-spacing: 2px;
+    }
+}

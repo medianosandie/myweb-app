@@ -1,4 +1,9 @@
+
 // Body
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 $blue: #007bff !default;
 $indigo: #6610f2 !default;
@@ -10,3 +15,16 @@ $yellow: #ffc107 !default;
 $green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
+
+$black-primary: #232323;
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Open+Sans");
+
+//  Typography
+$font-family-nunito: "Nunito", sans-serif;
+$font-family-montserrat: "Montserrat", sans-serif;
+$font-family-opensans: "Open Sans", sans-serif;
+
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
