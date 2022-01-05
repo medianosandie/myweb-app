@@ -4,17 +4,19 @@
             EXPERIENCE
         </h2>
         <hr class="mb-5" style="border-top: 1px solid #FFFFFF">
+        @foreach ($experiences as $experience)
         <div class="row mb-5">
             <div class="col-lg-8">
-                <h4 class="mb-0">Student</h4>
-                <p class="lead">Universitas Gunadarma</p>
+                <h4 class="mb-0">{{$experience->title}}</h4>
+                <p class="lead">{{$experience->loc}}</p>
                 <p>
-                    Deskripsi
+                    {{$experience->description}}
                 </p>
             </div>
             <div class="col-lg-4 text-lg-right">
-                2018 - present
+                {{$experience->since}}
             </div>
         </div>
+        @endforeach
     </div>
 </section>
