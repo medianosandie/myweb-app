@@ -1,7 +1,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="{{ route('dashboard') }}" class="brand-link">
         <img src="https://infyom.com/images/logo/blue_logo_150x150.jpg"
-             alt="AdminLTE Logo"
+             alt="AdminLTE Logo"/>
+        <img src="https://avatars.githubusercontent.com/medianosandie"
+             alt="Angga Logo"/>
              class="brand-image img-circle elevation-3">
         <span class="brand-text font-weight-light">{{ config('app.name') }}</span>
     </a>

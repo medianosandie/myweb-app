@@ -11,3 +11,9 @@
         <p>Experiences</p>
     </a>
 </li>
+<li class="nav-item">
+    <a href="{{ url('portofolios') }}" class="nav-link">
+        <i class="nav-icon fas fa-briefcase"></i>
+        <p>Portofolios</p>
+    </a>
+</li>

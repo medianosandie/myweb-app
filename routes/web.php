@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +11,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('index');
+});
 Route::get('/', [App\Http\Controllers\Controller::class, 'index']);
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
@@ -20,3 +21,5 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 Auth::routes();
 
 Route::resource('experiences', App\Http\Controllers\ExperienceController::class)->middleware('auth');
+
+Route::resource('portofolios', App\Http\Controllers\PortofolioController::class)->middleware('auth');

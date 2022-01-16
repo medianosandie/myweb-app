@@ -4,18 +4,13 @@
     <meta charset="UTF-8">
     <title>{{ config('app.name') }}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
           integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
           crossorigin="anonymous"/>
-
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
     @yield('third_party_stylesheets')
-
     @stack('page_css')
 </head>
-
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
     <!-- Main Header -->
@@ -26,11 +21,11 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
         </ul>
-
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                     <img src="https://infyom.com/images/logo/blue_logo_150x150.jpg"
+                    <img src="{{asset('img/mylogo.jpg')}}"
                          class="user-image img-circle elevation-2" alt="User Image">
                     <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
                 </a>
@@ -38,6 +33,7 @@
                     <!-- User image -->
                     <li class="user-header bg-primary">
                         <img src="https://infyom.com/images/logo/blue_logo_150x150.jpg"
+                        <img src="{{asset('img/mylogo.jpg')}}"
                              class="img-circle elevation-2"
                              alt="User Image">
                         <p>
@@ -60,17 +56,14 @@
             </li>
         </ul>
     </nav>
-
     <!-- Left side column. contains the logo and sidebar -->
 @include('layouts.sidebar')
-
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <section class="content">
             @yield('content')
         </section>
     </div>
-
     <!-- Main Footer -->
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
@@ -80,11 +73,8 @@
         reserved.
     </footer>
 </div>
-
 <script src="{{ mix('js/app.js') }}" defer></script>
-
 @yield('third_party_scripts')
-
 @stack('page_scripts')
 </body>
 </html>

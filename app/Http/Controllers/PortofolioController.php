@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Experience;
+use App\Models\Portofolio;
 
-class ExperienceController extends Controller
+class PortofolioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class ExperienceController extends Controller
      */
     public function index()
     {
-        $experiences = Experience::latest()->get();
-        return view('pages.experiences.index', compact('experiences'));
+        $portofolios = Portofolio::latest()->get();
+        return view('pages.portofolios.index', compact('portofolios'));
     }
 
     /**
@@ -36,12 +36,11 @@ class ExperienceController extends Controller
      */
     public function store(Request $request)
     {
-        $experience = new Experience();
-        $experience->title = $request->title;
-        $experience->loc = $request->loc;
-        $experience->description = $request->description;
-        $experience->since = $request->since;
-        $experience->save();
+        $portofolio = new Portofolio();
+        $portofolio->image = $request->image;
+        $portofolio->title = $request->title;
+        $portofolio->job = $request->job;
+        $portofolio->save();
 
         return redirect()->back()->with('success', 'Data added successfully');
     }
@@ -77,12 +76,11 @@ class ExperienceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $experience = Experience::findOrFail($id);
-        $experience->title = $request->title;
-        $experience->loc = $request->loc;
-        $experience->description = $request->description;
-        $experience->since = $request->since;
-        $experience->save();
+        $portofolio = Portofolio::findOrFail($id);
+        $portofolio->image = $request->image;
+        $portofolio->title = $request->title;
+        $portofolio->job = $request->job;
+        $portofolio->save();
 
         return redirect()->back()->with('success', 'Data updated successfully');
     }
@@ -95,8 +93,8 @@ class ExperienceController extends Controller
      */
     public function destroy($id)
     {
-        $experience = Experience::findOrFail($id);
-        $experience->delete();
+        $portofolio = Portofolio::findOrFail($id);
+        $portofolio->delete();
 
         return redirect()->back()->with('success', 'Data deleted successfully');
     }
