@@ -44,6 +44,10 @@ html, body {
   border-bottom: 5px solid #2196fe !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*!
  *   AdminLTE v3.1.0
  *   Author: Colorlib

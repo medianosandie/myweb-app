@@ -17,3 +17,9 @@
         <p>Portofolios</p>
     </a>
 </li>
+<li class="nav-item">
+    <a href="{{ url('educations') }}" class="nav-link">
+        <i class="nav-icon fas fa-briefcase"></i>
+        <p>Education</p>
+    </a>
+</li>

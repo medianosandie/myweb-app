@@ -9,8 +9,11 @@
         <div id="main" class="row">
           <div class="col-md-12">
             @include('pages.header')
+            @include('pages.about')
             @include('pages.experience')
+            @include('pages.education')
             @include('pages.portofolio')
+            @include('pages.contact')
           </div>
         </div>
       </div>

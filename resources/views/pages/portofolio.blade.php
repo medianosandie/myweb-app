@@ -10,7 +10,7 @@
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-0 shadow cardbody-hover">
             <img src="{{ $portofolio->image }}" class="card-img-top" alt="...">
-            <div class="card-body text-center">
+            <div class="card-body text-center text-black">
                 <h5 class="card-title mb-0">{{ $portofolio->title }}</h5>
                 <div class="card-text text-black-50">{{ $portofolio->job }}</div>
             </div>
